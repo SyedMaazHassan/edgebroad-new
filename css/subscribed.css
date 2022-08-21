@@ -1,0 +1,105 @@
+body {
+  background: rgba(231, 229, 229, 0.555);
+}
+
+/* creator card css */
+.card {
+  border: none !important;
+}
+
+#all_creators h1 {
+  font-weight: 600 !important;
+}
+
+.Subscribers h6 {
+  font-size: 15px;
+}
+
+.Subscribers p {
+  font-size: 12px;
+}
+
+.creat_info {
+  margin: 0px 12px;
+}
+
+.creat_info h6 {
+  font-size: 18px !important;
+}
+
+.creat_info p {
+  /* font-size: 18px !important; */
+  margin: -5px 0px;
+}
+
+.see-more {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  background: rgb(235, 233, 233);
+}
+.see-more a {
+  text-decoration: none;
+}
+
+.see-more p {
+  color: rgba(0, 30, 151, 1) !important;
+}
+
+.see-aerro {
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(134, 162, 238, 0.233);
+  margin: 16px 6px;
+}
+.fa-arrow-up {
+  color: rgba(0, 30, 151, 1);
+  transform: rotate(40deg);
+}
+
+.margin-top {
+  margin-top: 30px;
+}
+
+@media screen and (max-width: 993px) {
+  .main-content {
+    margin-top: 60px !important;
+  }
+}
+
+@media screen and (max-width: 578px) {
+  .see-more {
+    height: 110px;
+  }
+  .see-more-btn{
+    width: 93%;
+  }
+  #all_creators h3{
+    margin-top: 75px !important;
+  }
+
+  .profile-img{
+    margin-top: 16px !important;
+  }
+
+}
+
+@media screen and (max-width: 380px) {
+  .fa-house,
+  .fa-users,
+  .fa-list,
+  .fa-comments-dollar,
+  .fa-bell {
+    font-size: 25px !important;
+    padding: 10px;
+  }
+  .nav-link {
+    margin: 9px -19px !important;
+    padding: 5px 0px !important;
+  }
+}

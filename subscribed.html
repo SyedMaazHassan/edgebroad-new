@@ -1,0 +1,610 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/f13a9149e6.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/Journal.css">
+    <link rel="stylesheet" href="css/subscribed.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <title>Subscribed</title>
+
+</head>
+
+<body>
+  
+   
+    <div id="all_bodyContent">
+
+    <!-- notification Sidebar start -->
+
+    <div style="z-index: 1031; top: 0%; opacity: 0.5; width: 100%; height: 100%; position: fixed; background-color: black; display: none;"
+        id="overay"></div>
+
+    <div id="mySidenav" class="sidenav">
+        <div class="p-3">
+            <div class="p-2 row px-0 ">
+                <div class="w-50 d-flex align-items-center">
+                    <h4 class="my-0">Notifications</h4>
+                </div>
+                <div class="w-50  d-flex  justify-content-end">
+                    <i onclick="closeNav()" class="material-icons myIco  text-secondary" style="cursor: pointer;"
+                        title="Add new translation">
+                        close
+                    </i>
+                </div>
+            </div>
+            <hr>
+
+            <div class="mt-3">
+
+                <div class="text-center radius-10 border d-flex align-items-center justify-content-center my-4 py-4">
+                    <div class="text-center d-flex align-items-center">
+                        <i class="material-icons my-0 py-0 text-secondary">face_6</i>
+                        <p class="mx-2 my-0 py-0 text-secondary">You don't have any notification</p>
+                    </div>
+                </div>
+
+
+                <div class="border text-left w-100 radius-10 notification-card my-2">
+                    <div class="">
+                        <div class="row px-3 mt-2  text-secondary" style="font-size: 18px !important;">
+                            <div class="w-50">
+                                <small class="d-block">Subject</small>
+                            </div>
+
+                            <div class="w-50  d-flex justify-content-end align-items-center">
+
+
+                                <i class="material-icons mk-pointer" style="font-size: 18px;">cancel</i>
+                            </div>
+                        </div>
+                        <small class="mx-3 mt-1 font-size text-secondary">07 july 2022</small>
+                    </div>
+                    <div class="card-body py-3 pt-2 my-0">
+                        <p class="card-text" style="    font-size: 12px !important;">
+                            Your Cloud Firestore database is denying client requests and will continue to do so until
+                            you
+                            update your
+                            security rules
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border text-left w-100 radius-10 notification-card my-2">
+                    <div class="">
+                        <div class="row px-3 mt-2 text-secondary" style="font-size: 18px !important;">
+                            <div class="w-50">
+                                <small>Subject</small>
+                            </div>
+
+                            <div class="w-50 d-flex justify-content-end align-items-center">
+
+                                <i class="material-icons mk-pointer" style="font-size: 18px;">cancel</i>
+                            </div>
+                        </div>
+                        <small class="mx-3 mt-1 font-size text-secondary">07 july 2022</small>
+                    </div>
+                    <div class="card-body py-3 pt-2 my-0">
+                        <p class="card-text" style="font-size: 12px !important;">
+                            Your Cloud Firestore database is denying client requests and will continue to do so until
+                            you
+                            update your
+                            security rules
+                        </p>
+                    </div>
+                </div>
+
+
+                <div class="border text-left w-100 radius-10 notification-card my-2">
+                    <div class="">
+                        <div class="row px-3 mt-2 text-secondary" style="font-size: 18px !important;">
+                            <div class="w-50">
+                                <small>Subject</small>
+                            </div>
+
+                            <div class="w-50  d-flex justify-content-end align-items-center">
+
+                                <i class="material-icons mk-pointer" style="font-size: 18px;">cancel</i>
+                            </div>
+                        </div>
+                        <small class="mx-3 mt-1 font-size text-secondary">07 july 2022</small>
+                    </div>
+                    <div class="card-body py-3 pt-2 my-0 ">
+                        <p class="card-text" style="font-size: 12px !important;">
+                            Your Cloud Firestore database is denying client requests and will continue to do so until
+                            you
+                            update your
+                            security rules
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+    <!-- Notification sidebar end -->
+
+    <!-- navbar -->
+    <div class="w-100 bg-white border-bottom fixed-top ">
+        <div class="container">
+            <div class="row">
+                <div class=" col-sm-4 d-flex align-items-center searching py-2">
+                    <div class="profile_img">
+                        <img src="https://github.com/mdo.png" alt="mdo" width="35" height="35" class="border-radius">
+                    </div>
+                    <div id="search_input" class="d-flex mx-2 input-group mt-1 ">
+                        <input type="text" class="border-radius d-inline form-control p-2" placeholder="Enter here"
+                            aria-label="Search">
+                        <span class="input-group-text bg-white border-radius-left">
+                            <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Icon-list -->
+                <div class="icon-list col-sm-5 align-items-center justify-content-end">
+                    <div style="height: 50px;" class="d-flex align-items-center">
+
+                        <div class="w-100 d-flex align-items-center" style="height: 50px;">
+                            <div class="navbar-icon d-flex align-items-center justify-content-center">
+                                <a href="feed.html"><i class="material-icons">home</i></a>
+                            </div>
+                            <div class="navbar-icon icon-active d-flex align-items-center justify-content-center">
+                                <a href="creator.html"><i class="material-icons">groups</i></a>
+                            </div>
+                            <div class="navbar-icon d-flex align-items-center justify-content-center">
+                                <a href="subscribed.html"><i class="material-icons">list_alt</i></a>
+                            </div>
+                            <div class="navbar-icon d-flex align-items-center justify-content-center">
+                                <a href="coin_history.html"><i class="material-icons">payments</i></a>
+                            </div>
+                            <div class="navbar-icon d-flex align-items-center justify-content-center">
+                                <a href="messenger.html"><i class="material-icons">chat</i></a>
+                            </div>
+                            <div class="navbar-icon d-flex align-items-center justify-content-center">
+                                <a onclick="openNav()"><i class="material-icons">notifications</i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-3 menu d-flex align-items-center justify-content-end ">
+                    <div class="dropdown drop1 mx-2">
+                        <a href="#" class="d-flex  align-items-center link-dark text-decoration-none dropdown-toggle"
+                            id="dropdownUser2" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="https://github.com/mdo.png" alt="" width="30" height="30" class="rounded-circle ">
+                        </a>
+                        <ul class="dropdown-menu mt-2 text-small shadow" aria-labelledby="dropdownUser2">
+
+                            <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Sign out</a></li>
+                        </ul>
+                    </div>
+
+
+                    <div class="dropdown">
+
+                        <button class="btn btn-primary btn-font-size rounded-3 px-2 dropdown-btn" type="button"
+                            id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="mx-1 fa-solid fa-add "></i>Create
+                        </button>
+
+                        <ul class="dropdown-menu mt-2 text-small shadow" aria-labelledby="dropdownUser2">
+
+                            <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                                    href="#">Create post</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Go live</a></li>
+                        </ul>
+                    </div>
+
+                    <i class="fa-solid fa-bars fs-2" id="bars" style="display: none;" data-bs-toggle="offcanvas"
+                        data-bs-target="#offcanvasExample" aria-controls="offcanvasExample"></i>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="chat-link spinner-grow d-flex align-items-center justify-content-center text-primary p-4"
+            role="status">
+            <i class="fa-solid fa-message fs-4 text-white"></i>
+            <span class=""></span>
+        </div> -->
+    </div>
+
+    <!-- navbar end -->
+
+
+
+ 
+    <!-- Create post Modal -->
+    <!-- Modal -->
+    <div class="modal fade rounded-3" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title text-secondary" id="staticBackdropLabel">Create content</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Title</label>
+                        <input type="Text" class="upload_form form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp">
+
+                        <label for="exampleInputEmail1" class="mt-3 form-label">Select type</label>
+                        <div class="row">
+                            <div class="col-sm-4 ">
+                                <button type="button" class="type-btns w-100 btn btn-outline-primary my-2"
+                                    id="img" onclick="setValue('img')">Image</button>
+                            </div>
+                            <div class="col-sm-4">
+                                <button type="button" class="type-btns w-100 btn btn-outline-primary  my-2"
+                                    id="video" onclick="setValue('video')">Video</button>
+                            </div>
+                            <div class="col-sm-4 ">
+                                <button type="button" class="type-btns w-100 btn btn-outline-primary  my-2"
+                                    id="pdf" onclick="setValue('pdf')">PDF</button>
+                            </div>
+
+                            <!-- hidden input -->
+                            <input type="hidden" class="upload_form form-control" id="upload_post_select"
+                                aria-describedby="emailHelp">
+                            <!-- hidden input -->
+
+
+                        </div>
+
+                        <label for="exampleInputEmail1" class="mt-3 form-label">Description</label>
+                        <textarea class="upload_form form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+
+
+                        <label for="exampleInputEmail1" class="mt-3 form-label">Attach file</label>
+                        <div class="w-100 py-5 upload_file border-radius1 text-center">
+                            <button type="button"
+                                style="background-color: rgba(168, 200, 248, 0.568); color: rgb(79, 123, 245); border: none; font-weight: bold;"
+                                class=" btn btn-primary w-25 my-3 nb">Upload</button>
+                            <p class="p-0 mb-2">or</p>
+                            <p class="p-0 m-0">drag & drop your file here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container main-content" style=" margin-top: 100px;">
+        <div id="all_creators">
+            <!-- <h4 class="text-secondary">Creators you subscribed</h5> -->
+            <h3 class="text-secondary  subscribed-heading mb-0">Creators you subscribed</h3>
+
+            <!-- First Person Profile -->
+            <div class="row my-4">
+                <!-- card-profmde -->
+                <div class="profile-img d-flex mb-2 mt-4">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="45" height="45" class="rounded-circle ">
+                    <div class="creat_info text-secondary">
+                        <h6 class="fw-bold">Syed Maaz Hassan</h5>
+                            <p>24k subscribers</p>
+                    </div>
+                </div>
+
+                <!-- card-1 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-2 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-4 -->
+                <div class="col-md-3 my-2 align-items-center">
+                    <div class="card  see-more text-start p-2 border-radius1">
+                        <a href="#" class="m-0 p-0">
+                            <div class="text-center see-aerro">
+                                <i class="fa-solid fa-arrow-up fs-4"></i>
+                            </div>
+                            <p class="text-primary  px-0">See more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- Second person Profile -->
+            <div class="row my-4">
+                <!-- card-profile -->
+                <div class="profile-img d-flex mb-2 mt-3">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="45" height="45" class="rounded-circle ">
+                    <div class="creat_info text-secondary">
+                        <h6 class="fw-bold">Syed Maaz Hassan</h5>
+                            <p>24k subscribers</p>
+                    </div>
+                </div>
+
+                <!-- card-1 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-2 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-4 -->
+                <div class="col-md-3 my-2 align-items-center">
+                    <div class="card  see-more text-start p-2 border-radius1">
+                        <a href="#" class="m-0 p-0">
+                            <div class="text-center see-aerro">
+                                <i class="fa-solid fa-arrow-up fs-4"></i>
+                            </div>
+                            <p class="text-primary  px-0">See more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- third person Profile -->
+            <div class="row my-4">
+                <!-- card-profile -->
+                <div class="profile-img d-flex mb-2 mt-3">
+                    <img src="https://github.com/mdo.png" alt="mdo" width="45" height="45" class="rounded-circle ">
+                    <div class="creat_info text-secondary">
+                        <h6 class="fw-bold">Syed Maaz Hassan</h5>
+                            <p>24k subscribers</p>
+                    </div>
+                </div>
+
+                <!-- card-1 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-2 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-3 -->
+                <div class="col-md-3 my-2">
+                    <div class="card Subscribers text-start p-2 border-radius1">
+                        <img class="card-img-top border-radius1" src="/img/earth_img.jpg" alt="Title">
+                        <div class="card-body p-1 m-0">
+                            <h6 class="card-title py-1 m-0">Posttitle of video or photo...</h6>
+                            <p class="card-text p-0 m-0  text-secondary">9 Nov 2021 . 24k views</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- card-4 -->
+                <div class="col-md-3 my-2 align-items-center">
+                    <div class="card  see-more text-start p-2 border-radius1">
+                        <a href="#" class="m-0 p-0">
+                            <div class="text-center see-aerro">
+                                <i class="fa-solid fa-arrow-up fs-4"></i>
+                            </div>
+                            <p class="text-primary  px-0">See more</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <button type="button"
+                style="background-color: rgba(174, 202, 245, 0.445);  color: rgba(0, 30, 151, 1) ; border: none; font-weight: bold;"
+                class="see-more-btn mx-auto mb-3 col-md-4 btn btn-primary mb-3">See more</button>
+        </div>
+    </div>
+
+
+
+
+       <!-- Offcanvas Side Bar-->
+       <div class="offcanvas offcanvas-start" style="width: auto;" tabindex="-1" id="offcanvasExample"
+       aria-labelledby="offcanvasExampleLabel">
+       <!-- <div class="offcanvas-body"> -->
+       <div class="offcanvas-body d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;">
+           <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+               <div class="row">
+                   <div class=" col-sm-12 d-flex align-items-center ">
+                       <div class="profile_img">
+                           <img src="https://github.com/mdo.png" alt="mdo" width="45" height="45"
+                               class="border-radius">
+                       </div>
+                       <div id="search_input" class="d-flex mx-2 input-group mt-1 ">
+                           <input type="text" class="side-input border-radius1 d-inline form-control p-2"
+                               placeholder="Enter here">
+                           <span class="input-group-text bg-light border-radius-left">
+                               <i class="fa-solid fa-magnifying-glass fs-5"></i>
+                           </span>
+                       </div>
+                   </div>
+               </div>
+           </a>
+           <hr>
+           <ul class="nav nav-pills flex-column mb-auto">
+               <li class="nav-item p-0">
+                   <a href="feed.html" class="d-flex align-items-center nav-link text-white ">
+                       <svg class="bi me-2" width="16" height="16">
+                           <use xlink:href="#home"></use>
+                       </svg>
+                       <i class="fa-solid  fa-house icon fs-4 px-2 text-secondary"></i>
+                       <h6>Home </h6>
+                   </a>
+               </li>
+               <li class="nav-item p-0">
+                   <a href="creator.html" class="nav-link text-white d-flex align-items-center">
+                       <svg class="bi me-2" width="16" height="16">
+                           <use xlink:href="#speedometer2"></use>
+                       </svg>
+                       <i class="fa-solid  fa-users icon fs-4 px-2  text-secondary"></i>
+                       <h6>Creator's </h6>
+                   </a>
+               </li>
+               <li class="nav-item p-0">
+                   <a href="subscribed.html" class="nav-link text-white d-flex align-items-center">
+                       <svg class="bi me-2" width="16" height="16">
+                           <use xlink:href="#table"></use>
+                       </svg>
+                       <i class="fa-solid  fa-list  icon fs-4 px-2  text-secondary"></i>
+                       <h6>Subscribed </h6>
+                   </a>
+               </li>
+               <li class="nav-item p-0">
+                   <a href="coin_history.html" class="d-flex align-items-center nav-link text-white ">
+                       <svg class="bi me-2" width="16" height="16">
+                           <use xlink:href="#grid"></use>
+                       </svg>
+                       <i class="fa-solid  fa-comments-dollar icon fs-4 px-2  text-secondary"></i>
+                       <h6>Coins history </h6>
+                   </a>
+               </li>
+               <li class="nav-item p-0">
+                   <a href="messenger.html" class="d-flex align-items-center nav-link text-white ">
+                       <svg class="bi me-2" width="16" height="16">
+                           <use xlink:href="#grid"></use>
+                       </svg>
+                       <i class=" fa-solid fa-message icon fs-4 px-2  text-secondary "></i>
+                       <h6>Massege </h6>
+                   </a>
+               </li>
+
+           </ul>
+           <hr>
+           <div class="dropdown">
+               <a href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+                   id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                   <img src="https://github.com/mdo.png" alt="" width="32" height="32" class="rounded-circle me-2">
+                   <strong>Syed Maaz Hassan</strong>
+               </a>
+               <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+                   <li><a class="dropdown-item" href="profile.html">Profile</a></li>
+                   <li>
+                       <hr class="dropdown-divider">
+                   </li>
+                   <li><a class="dropdown-item" href="#">Sign out</a></li>
+               </ul>
+           </div>
+
+       </div>
+
+   </div>
+
+</div>
+
+
+<div class="spinner-container">
+    <div class="spinner-border text-primary " role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+</div>
+
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="script/uploadpost.js"></script>
+    <script src="script/sidebar.js"></script>
+    <script src="script/loading.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

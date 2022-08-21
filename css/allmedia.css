@@ -1,0 +1,38 @@
+
+
+body{
+    background-color: rgba(231, 229, 229, 0.555);
+}
+
+.all_post_ubdate{
+    margin-top: 100px !important;
+}
+
+
+.suggestion_card span{
+    font-size: 13px;
+}
+
+.all_suggestions{
+    height: 80vh;
+    overflow: auto;
+}
+
+@media screen and (max-width: 768px) {
+    /* .post_ubdate{
+        padding: 0px 10px 0 10px!important;
+    } */
+   
+    .all_post_ubdate{
+        margin-top: 80px !important;
+    }
+
+    .all_suggestions{
+        margin-top: 20px;
+    }
+
+    .profile-img div h6{
+        font-size: 14px;
+        padding: 0;
+    }
+}

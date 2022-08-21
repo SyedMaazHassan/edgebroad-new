@@ -1,0 +1,207 @@
+* {
+  margin: 0%;
+  padding: 0%;
+}
+
+body {
+  overflow-x: hidden !important;
+}
+
+a.big_links {
+  position: absolute;
+}
+
+a.big_links:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.big_links:hover:before {
+  text-decoration-line: line-through;
+  visibility: visible;
+  width: 100%;
+}
+
+.footer_links {
+  color: rgb(0, 0, 0);
+  font-size: 14px;
+}
+
+.footer_links_heading {
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+.footer_down_links {
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.active {
+  top: 10px !important;
+  transition: 0.3s !important;
+}
+
+nav {
+  transition: 0.6s;
+}
+
+.front-img {
+  width: 700px;
+  height: 400px;
+  margin-top: -79px;
+}
+
+.main-div {
+  padding-bottom: 10px;
+}
+
+.front-div {
+  margin-bottom: -64px;
+}
+
+.front-main-heading {
+  font-size: 3.256rem;
+}
+
+.sign-email-button {
+  font-weight: 600;
+  font-size: 0.875rem;
+  padding: 19px 50px 19px 50px;
+}
+
+.sign-google-button {
+  padding: 2px 20px 2px 20px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  background-color: rgb(199, 199, 199);
+}
+
+.google-icon {
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.new-navbar {
+  border-radius: 50px;
+  position: fixed;
+  left: 0;
+  top: -95px;
+  z-index: 100;
+  box-shadow: 0 0 10px 2px rgba(83, 82, 82, 0.329);
+}
+
+.new-navbar-logo {
+  border-radius: 50px;
+}
+
+.second-main-div {
+  background-color: #f7fbff !important;
+}
+
+.headings {
+  font-size: 2.8rem;
+  font-weight: bold;
+  /* color: black; */
+}
+
+.big-text-2 {
+  font-size: 18px;
+  color: grey;
+}
+
+.big-text {
+  font-size: 20px;
+  color: grey;
+}
+
+.middle-row {
+  padding-top: 140px;
+  padding-bottom: 140px;
+}
+
+.big-center-heading {
+  margin-top: 95px;
+  font-size: 3.125rem;
+  color: black;
+}
+
+.center-small-text {
+  color: black;
+  font-size: 1.125rem;
+}
+
+.users {
+  font-size: 65px;
+}
+
+.users-text {
+  color: black;
+}
+
+.users-div {
+  margin-top: 75px;
+  margin-bottom: 120px;
+}
+
+.video-text-div {
+  margin-bottom: 80px;
+}
+
+.main-video {
+  border-radius: 0% 150px 150px 0%;
+}
+
+.main-text {
+  font-size: 27px;
+  color: black;
+}
+
+.small-text {
+  font-size: 14px;
+}
+
+.card-upper-heading {
+  color: black;
+  font-size: 2rem !important;
+}
+
+.card-title {
+  font-weight: 650;
+  color: black;
+}
+
+.card-link {
+  color: #1264a3;
+}
+
+.footer-div {
+  padding-bottom: 100px;
+  border-radius: 0% 0% 50px 50px;
+}
+
+.footer-heading {
+  font-size: 45px;
+  padding-top: 100px;
+}
+
+.footer-links-div {
+  margin-left: 100px;
+}
+
+.footer-links {
+  margin-top: -51px;
+  margin-left: 58px;
+}
+
+@media screen and (max-width: 99px) {
+}

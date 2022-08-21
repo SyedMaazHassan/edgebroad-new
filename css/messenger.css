@@ -1,0 +1,242 @@
+body{
+    background-color: rgba(231, 229, 229, 0.555);
+}
+
+.active{
+    background-color: rgba(231, 229, 229, 0.555);
+}
+
+.search{
+    width: 100%;
+    padding: 6px;
+    height: 36px;
+    padding-left: 40px;
+    border: none;
+    background-color: rgba(231, 229, 229, 0.555);
+}
+
+.search-icon{
+    position: absolute;
+}
+
+.search:focus{
+    background-color:rgba(231, 229, 229, 0.555);
+}
+
+.massege-card{
+    cursor: pointer;
+}
+
+.header{
+    width: 75% !important;
+    position: relative;
+    right: 0;
+    z-index: 1 !important;
+    height: 76px;
+}
+
+.massege-card:hover{
+    background-color: rgba(231, 229, 229, 0.555) !important;
+}
+
+.user_name{
+    display: inline block;
+}
+.call-icon{
+    right: 3%;
+}
+.users_friend_list{
+    height: 100vh;
+    overflow: auto;
+    z-index: 1;
+}
+
+.massege{
+    margin: -12px 0px;
+}
+
+.time{
+    font-size: 12px !important;
+}
+
+.user-massege{
+    height: auto;
+}
+.user-massege p{
+    width: 50%;
+    overflow: hidden !important;
+}
+
+.call-icon i{
+    color: rgb(29, 128, 240) !important;
+}
+
+::-webkit-scrollbar{
+    width: 3px !important;
+}
+
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(146, 137, 137) !important;
+    border-radius: 15px;
+
+}
+
+
+/* chating area CSS */
+
+.usre-massege2{
+    background: rgb(29, 128, 240)  !important;
+    color: white;
+    box-shadow: 1px 1px 3px 1px grey;
+    width: auto;
+}
+.user-massege2 span{
+    width: 100% !important;
+    flex-wrap: wrap;
+}
+
+.usre-massege1{
+    box-shadow: 1px 2px 5px 1px grey;
+}
+
+
+
+
+.chating-area{
+    height: 100vh !important;
+    /* background-color: rgb(39, 180, 223); */
+    /* z-index: -100 !important; */
+    background: url('https://i.pinimg.com/736x/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg') no-repeat center ;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.fa-face-grin-wide, 
+.fa-paperclip, 
+.fa-microphone, 
+.fa-paper-plane{
+    cursor: pointer;
+}
+
+.send-massege{
+    position: fixed !important;
+    bottom: 0 !important;
+    width: 50% !important;
+    background-color: rgb(250, 250, 250) !important;
+}
+
+.send-input{
+    border: none;
+    /* background-color: ; */
+    background-color: rgba(209, 209, 209, 0.822) !important;
+}
+.send-input:focus{
+    box-shadow: 0 0 0 0;
+}
+
+
+.fa-paper-plane{
+    z-index: 100;
+}
+
+.chating{
+    position: relative; 
+    top: 43%;
+    /* margin-top: 100px !important; */
+}
+
+.massege{
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#all-massege{
+    margin-top: 94px;
+    margin-bottom: 91px;
+}
+
+
+
+
+
+
+.usre-massege{
+    height: 100% !important;
+}
+
+/* user setting chat Css */
+.user-setting-chat{
+    margin-top: 76px;
+}
+
+
+/* drop down for user chat setting */
+.accordion-button{
+    background-color: white !important;
+    border-bottom: none !important;
+}
+
+.accordion-header{
+    border: 0px solid !important;
+}
+
+.accordion-button:focus{
+    background-color: white !important;
+    box-shadow: 0 0 0 0 ;
+}
+
+.accordion-collapse{
+    background-color: none !important;
+    border: 0px solid grey;
+}
+.accordion-body{
+    background-color: none !important;
+    padding: 0;
+}
+
+@media screen and (max-width: 1100px) {
+    .suggestion-card{
+        display: none;
+    }
+    .chating-area{
+        width: 65%;
+    }
+    .users_friend_list{
+        width: 35%;
+    }
+    .header{
+        width: 65% !important;
+    }
+    .send-massege{
+        width: 65% !important;
+    }
+}
+@media screen and (max-width: 722px) {
+
+    .chating-area{
+     display: none;
+    }
+    .users_friend_list{
+        width: 100%;
+    }
+    .header{
+        width: 100% !important;
+    }
+    .chating-area{
+        width: 100%;
+    }
+    .send-massege{
+        width: 100% !important;
+    }
+    
+}
+
+@media screen and (max-width: 370px) {
+    .call-icon i{
+        font-size: 15px !important;
+    }
+    .header{
+        padding: 2px !important;
+    }
+}

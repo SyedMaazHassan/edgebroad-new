@@ -1,0 +1,178 @@
+body {
+  background: rgba(231, 229, 229, 0.555);
+}
+
+.card {
+  border: none !important;
+}
+
+/* profile css start */
+
+
+
+.profile-img {
+  margin: -101px 12px;
+}
+
+.profile {
+  margin: 80px auto;
+}
+
+.profile-img img {
+  border: 4px solid white;
+}
+
+.subscribtion-content {
+  margin-top: 50px;
+}
+
+.profile-content {
+  padding: 4px -29px;
+  margin-top: 105px;
+  margin-left: -15px;
+}
+
+.profile-content h4 {
+  color: rgba(85, 95, 105, 1) !important;
+}
+
+.vlogger {
+  color: rgb(179, 180, 182) !important;
+}
+
+.fa-pen {
+  cursor: pointer;
+}
+
+.experirence {
+  color: rgb(80, 79, 79) !important;
+  font-weight: 500;
+}
+
+.vlogger {
+  margin: -8px 0px;
+  color: grey !important;
+}
+
+.subscribe-btn button {
+  margin: 20px 0;
+  width: 25%;
+}
+
+.subscribe-btn img {
+  margin-left: 19px;
+  margin-right: 5px;
+}
+
+.subscribe-btn h2 {
+  color: rgba(85, 95, 105, 1) !important;
+  letter-spacing: 1px;
+}
+
+.social-link a {
+  text-decoration: none;
+  display: inline-block !important;
+}
+
+.social-link {
+  margin-top: 77px;
+}
+
+.social-link img{
+  /* height: 50px; */
+}
+
+.social-link ul li{
+  list-style: none;
+}
+
+
+/* Content CSS sTART */
+.fa-tiktok {
+  color: rgb(17, 101, 228);
+}
+
+.fa-pen {
+  color: grey;
+}
+
+@media screen and (max-width: 993px) {
+  .Profile-back{
+    width: 95%;
+    margin: 0 auto !important;
+  }
+  .main-content {
+    margin-top: 60px !important;
+  }
+  .profile-pic {
+    display: block !important;
+    margin-right: 15px;
+  }
+  .drop1 {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-content {
+    width: 100% !important;
+    margin-top: 64px;
+  }
+
+  .Profile-back img {
+    height: 150px !important;
+  }
+  .social-link {
+    width: 100% !important;
+    margin-top: 0;
+  }
+
+  .social-link img{
+    height: 30px !important;
+    width: 30px !important;
+  }
+
+  .social-link{
+    display: flex;
+  }
+
+  .all_social_link{
+    display: flex;
+    width: 100%;
+    margin-top: 10px;
+    flex-wrap: wrap;
+    /* background-color: red; */
+  }
+
+  .profile-img {
+    margin: -58px 28px;
+  }
+  .subscribe-btn img {
+    height: 40px !important;
+    width: 40px !important;
+  }
+
+  .profile-img img {
+    width: 85px !important;
+    height: 85px !important;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .profile {
+    margin: 65px auto;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .subscribe-btn button {
+    width: 100% !important;
+  }
+  .fa-house,
+  .fa-users,
+  .fa-list,
+  .fa-comments-dollar,
+  .fa-bell {
+    font-size: 25px !important;
+  }
+}

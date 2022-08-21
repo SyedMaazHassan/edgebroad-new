@@ -1,0 +1,134 @@
+body{
+    background: rgba(231, 229, 229, 0.555);
+}
+
+.card{
+    border: none;
+}
+
+/* coins-summary CSS  */
+.coins-summary h4{
+    font-size: 14px;
+}
+
+.table-heading{
+    font-size: 12px !important;
+    color: grey;
+    letter-spacing: 1px;
+    background-color: rgba(231, 229, 229, 0.555);
+}
+
+.table{
+   margin-top: 50px !important;
+}
+
+.table thead tr th{
+    border: none !important;
+}
+
+.fa-solid{
+    font-size: 12px;
+}
+
+.coins-summary p{
+    
+    font-size: 22px;
+    margin-top: -5px;
+    color: rgba(137, 148, 158, 1) !important;
+    
+}
+
+/* .history{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 25px;
+    margin-bottom: 10px;
+    overflow-x: scroll;
+    gap: 10px;
+    position: relative;
+    width: 100%;
+    height: 692px;
+    background: #FFFFFF;
+    border-radius: 16px;
+} */
+
+
+.main-summary{
+    margin-top: 75px;
+}
+
+
+
+.row div h6{
+    font-size: 12px !important;
+}
+
+
+
+
+@media screen and (max-width: 993px)  {
+    #populer_creator{
+        height: 420px !important;
+    }
+    .populer_creator{
+        position: relative !important;
+        top: 20%;
+    }
+    .profile-pic{
+        display: block !important;
+        margin-right: 15px;
+    }
+    .drop1{
+        display: none;
+    }
+  
+
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .main-summary .row .col-md-3{
+        margin-bottom: 16px !important;
+    }
+
+    .main-summary .row h3{
+        margin-top: 0px !important;
+    }
+    .table-heading td{
+        font-size: 10px !important;
+    }
+    .name{
+        font-size: 13px !important;
+    }
+
+    .user-name{
+        text-align: center !important;
+    }
+    .text-danger, .text-success, .text-warning{
+        padding: 16px 0px !important;
+    }
+   .bars-count {
+       font-size: 14px !important;
+   }
+   .hours{
+    padding-top: 17px !important;
+   }
+    
+
+
+ 
+}
+
+
+@media screen and (max-width: 380px) {
+    .fa-house, .fa-users, .fa-list, .fa-comments-dollar , .fa-bell{
+        font-size: 25px !important;
+        padding: 10px;
+    }
+    .nav-link {
+        margin: 9px -19px !important;
+        padding: 5px 0px !important;
+    }
+}

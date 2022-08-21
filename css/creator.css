@@ -1,0 +1,84 @@
+
+body{
+    background: rgba(231, 229, 229, 0.555);
+}
+
+/* creater card CSS */
+
+.profile-dp img{
+    margin-top: -55px;
+    border: 2px solid white;
+    width: 90px !important;
+    height: 90px !important;
+}
+
+
+
+
+@media screen and (max-width: 993px){
+
+    .Subscribers{
+        width: 100% !important;
+    }
+
+
+    .main-content{
+        margin-top: 60px !important;
+    }
+
+    .menu{
+        display: none !;
+    }
+    #nav_btn{
+        display: none;
+    }
+    .col-sm-5{
+        width: 50%;
+        display: flex;
+        align-items: center !important;
+        /* margin-top: 15px; */
+    }
+    .log-out{
+        display: none;
+    }
+    .menu{
+        width: 50%;
+    }
+    .icon-list{
+        width: 50%;
+        display: flex !important;
+        justify-content: start !important;
+        margin-right: -3px !important;
+    }
+    .fa-house, .fa-users, .fa-list, .fa-comments-dollar , .fa-bell{
+        font-size: 30px !important;
+    }
+    .searching{
+        display: none !important;
+    }
+    #bars{
+        display: block !important;
+        cursor: pointer;
+        font-size: 30px !important;
+    }
+    .profile-pic{
+        display: block !important;
+        margin-right: 15px;
+    }
+    .drop1{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .col-sm-5 li{
+        width: 50%;
+        display: flex !important;
+        align-items: center !important;
+        align-items: center !important;
+    }
+    .creat-heading{
+        margin-top: -25px;
+    }
+}

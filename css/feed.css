@@ -1,0 +1,396 @@
+body {
+  background: rgba(238, 237, 237, 0.733);
+
+}
+/* header Styling Start*/
+
+
+.chat-link{
+  position: fixed;
+  right: 9%;
+  bottom: 12%;
+  cursor: pointer;
+}
+
+/* .active{
+  padding: 1.5rem !important;
+  background-color: rgba(15, 98, 233, 0.89);
+  border-radius: 50%;
+} */
+
+
+
+.fa-add {
+  font-size: 12px !important;
+}
+.side-bar-modal{
+  z-index: 100 !important;
+}
+.card {
+  border: none !important;
+}
+
+/* right card CSS Start User Profile*/
+
+.profile_card::before {
+  content: "";
+  /* border: 1px solid; */
+  width: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.profile_card {
+  position: sticky;
+  top: 89px;
+  margin-top: 89px;
+  width: 280px;
+  /* align-items: center; */
+  display: flex;
+  height: 449px !important;
+}
+
+.profile-img {
+  position: absolute;
+  width: 94%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-img img {
+  border: 3px solid white;
+  margin-top: 65px;
+}
+
+.online_mark {
+  border: 2px solid white;
+  background: green;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: absolute;
+  margin-left: 53px !important;
+  margin-top: 16px;
+}
+
+.country_name {
+  margin-top: 55px !important;
+}
+
+.country_name h4 {
+  font-size: 18px;
+}
+
+.country_name h6 {
+  font-size: 14px;
+}
+
+.coin_count {
+  margin: 13px 0px;
+}
+
+.coin_count p {
+  font-size: 12px;
+}
+
+.coin_count h5 {
+  font-size: 45px;
+  margin: -7px -4px !important;
+}
+
+.hr {
+  color: rgb(190, 187, 187);
+}
+.subscription h5 {
+  font-size: 14px;
+}
+
+.multi_users {
+  border: 2px solid white;
+  display: flex;
+}
+
+.img-2 {
+  margin: 0px -15px;
+}
+
+.users {
+  width: 40px;
+  height: 40px;
+  background-color: rgb(241, 240, 240);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* center card CSS Start User Post*/
+.users-post {
+  padding-top: 22px;
+  margin-top: 65px !important;
+  height: 100%;
+  border: none !important;
+}
+
+.user_info p {
+  margin: -1px 11px;
+  font-size: 15px;
+  color: rgba(136, 134, 134, 0.589);
+}
+
+.user_info h5 {
+  margin: 4px 9px;
+  font-size: 18px;
+}
+
+.user_post_title p {
+  margin: -1px 0px;
+  color: rgba(119, 116, 116, 0.911);
+}
+
+.user_post_title h5 {
+  font-size: 17px;
+}
+
+/* populer Card creater CSS */
+
+.populer_creator::before {
+  content: "";
+  /* border: 1px solid; */
+  width: auto;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+.populer_creator {
+  position: sticky;
+  top: 89px;
+  margin-top: 89px;
+  width: 280px;
+  /* align-items: center; */
+  height: 500px !important;
+}
+
+.creator {
+  width: 103% !important;
+}
+
+.populer_creator h6 {
+  font-size: 15px !important;
+}
+
+.creat_info {
+  padding-left: 6px;
+}
+
+.creat_info p {
+  font-size: 11px;
+  margin: 2px 0px;
+}
+
+.create_btn {
+  width: 86px !important;
+  font-size: 11px !important;
+}
+
+/* sidebar CSS */
+.side_link:active {
+  background-color: rgb(62, 62, 105) !important;
+}
+.create_post{
+  width: 5px !important;
+}
+.upload_form{
+  background-color: rgba(238, 237, 237, 0.733);
+  border: none;
+}
+
+.upload_form:focus{
+  background-color: rgba(238, 237, 237, 0.733);
+}
+
+.btn-outline-primary:focus{
+  background-color: rgba(15, 98, 233, 0.89);
+  color: white;
+}
+
+.upload_file{
+  border: 2px dashed grey;
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1482px) {
+  .menu {
+    width: 18% !important;
+  }
+  .icon-list {
+    width: 48% !important;
+  }
+  .create_btn {
+    width: 1000px !important;
+    font-size: 11px !important;
+  }
+
+  .creat_info p {
+    font-size: 13px;
+    margin-top: -5px !important;
+  }
+
+  .populer_creator h6 {
+    font-size: 20px !important;
+    margin-top: -2px;
+  }
+}
+
+@media screen and (max-width: 1482px) and (min-width: 1397px) {
+  .menu {
+    width: 18% !important;
+  }
+  .icon-list {
+    width: 48% !important;
+  }
+  .creat_info p {
+    font-size: 14px;
+    margin-top: -3px !important;
+  }
+
+  .populer_creator h6 {
+    font-size: 20px !important;
+  }
+
+  .populer_creator h6 {
+    font-size: 18px !important;
+  }
+  .create_btn {
+    width: 121px !important;
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 1397px) and (min-width: 1196px) {
+  .create_btn {
+    width: 96px !important;
+    margin: 1px 2px !important;
+  }
+
+  .creat_info p {
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 1196px) and (min-width: 1016px) {
+  .create_btn {
+    width: 86px !important;
+    font-size: 11px !important;
+  }
+  .creat_info p {
+    font-size: 11px;
+    font-size: 11px;
+    margin: -1px 0px;
+  }
+  .populer_creator h6 {
+    font-size: 15px !important;
+    margin-top: -1px !important;
+  }
+  .coin_count {
+    margin: 7px 29px !important;
+  }
+  .coin_count h5 {
+    font-size: 38px;
+  }
+  .coin_count p {
+    font-size: 10px;
+  }
+  .coin_count img {
+    width: 52px;
+    height: 52px;
+    margin-right: 4px !important;
+  }
+  .subscription h5 {
+    font-size: 13px;
+  }
+  .multi_users {
+    border: 2px solid #fff;
+    display: flex;
+    width: 34px;
+    height: 34px;
+  }
+  .users {
+    width: 34px;
+    height: 34px;
+  }
+  .profile_card {
+    height: 396px;
+  }
+  .profile-img img {
+    margin-top: 58px;
+  }
+  #populer_creator {
+    width: 28% !important;
+  }
+  .profile_card {
+    width: 28% !important;
+    height: 433px !important;
+  }
+}
+
+@media screen and (max-width: 1016px) {
+  .create_btn {
+    width: 83px !important;
+    font-size: 11px;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  #populer_creator {
+    height: 420px !important;
+  }
+  .populer_creator {
+    position: relative !important;
+    top: 20%;
+  }
+  .profile_card {
+    width: 45% !important;
+    
+    display: inline-block !important;
+  }
+  #populer_creator {
+    width: 45% !important;
+    margin-left: 10px !important;
+  }
+  .users-post {
+    position: absolute;
+    margin-top: 536px !important;
+    width: 80% !important;
+  }
+  .create_btn {
+    width: 113px !important;
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+  .profile_card {
+    width: 50% !important;
+  }
+  .users-post {
+    position: absolute;
+    margin-top: 520px !important;
+    width: 90% !important;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  #populer_creator {
+    display: none !important;
+  }
+  .profile_card {
+    margin-top: 70px !important;
+    width: 95% !important;
+  }
+}
+
+
